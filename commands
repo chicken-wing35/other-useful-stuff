@@ -1,0 +1,10 @@
+Returns authentication methods that a SSH server supports.
+nmap -p 22 --script ssh-auth-methods --script-args="ssh.user=<username>" <target>
+ output:
+ 22/tcp open  ssh     syn-ack
+| ssh-auth-methods:
+|   Supported authentication methods:
+|     publickey
+|_    password
+
+nikto allows you to see what areas of a website you might want to check out 
